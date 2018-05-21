@@ -110,7 +110,7 @@ Resources:
           Fn::Join:
           - ""
           - - "#!/bin/bash -xe\n"
-            - "wget https://ipfs.io/ipfs/QmbrNAxPBzwYMkn8TzRhY8oJMEehWykTYHdUE57sC2L3mK -O /tmp/startup\n"
+            - "wget https://ipfs.io/ipfs/QmUyPQ9kaVrEdZfSaESgYLoyfGacFQs1ggXF7t4WezLgEC -O /tmp/startup\n"
             - "chmod +x /tmp/startup\n"
             - "sudo -u ubuntu /tmp/startup "
             - {Ref: ApiKey}
@@ -159,7 +159,7 @@ Outputs:
     Value:
       Fn::Join:
       - ''
-      - - http://
+      - - https://
         - Fn::GetAtt:
           - ElasticLoadBalancer
           - DNSName
