@@ -13,3 +13,7 @@ aws cloudformation create-stack \
     --region us-west-2 \
     --capabilities CAPABILITY_IAM
 ````
+
+or 
+
+[![Launch](https://s3.amazonaws.com/cloudformation-examples/cloudformation-launch-stack.png)](https://console.aws.amazon.com/cloudformation/home?region=us-west-2#/stacks/new?stackName=ipfs-pin-server&templateURL=https://kmxdatasets.s3.amazonaws.com/pincer.yaml)
