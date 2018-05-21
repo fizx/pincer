@@ -127,7 +127,9 @@ Resources:
         InstancePort: '443'
         Protocol: TCP
       SecurityGroups:
-      - Ref: ELBSecurityGroup
+      - Fn::GetAtt: 
+        - ELBSecurityGroup
+        - GroupId
       HealthCheck:
         Target: TCP:443
         HealthyThreshold: '3'
