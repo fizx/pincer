@@ -38,6 +38,6 @@ cat server.crt server.key > server.pem
 sudo bash -c "echo ENABLED=1 >> /etc/default/haproxy"n
 sudo wget https://ipfs.io/ipfs/QmNx7fAcx91PkHWMKBbaks7T3TFQUX5NA3WMNnwkgm3Bxw -O /etc/haproxy/haproxy.cfg
 sudo service haproxy start
-wget https://ipfs.io/ipfs/QmcEgzrPte2ErvuWtSNxGTpSy84hZQHTivYVbjnjyhBb6X -O server.rb
+wget https://ipfs.io/ipfs/QmWXJw7U4FeuYPEiuD485un4R2Jo6gjLNJxv9Wz4Pn4PYY -O server.rb
 sudo gem install sinatra --no-rdoc --no-ri
 screen -S ruby -d -m ruby server.rb "$KEY"

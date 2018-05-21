@@ -110,7 +110,7 @@ Resources:
           Fn::Join:
           - ""
           - - "#!/bin/bash -xe\n"
-            - "wget https://ipfs.io/ipfs/QmUyPQ9kaVrEdZfSaESgYLoyfGacFQs1ggXF7t4WezLgEC -O /tmp/startup\n"
+            - "wget https://ipfs.io/ipfs/Qma7CByrPbbKmA3rbuXFjEqVC1ogSLXy2VJuwRducgJPRV -O /tmp/startup\n"
             - "chmod +x /tmp/startup\n"
             - "sudo -u ubuntu /tmp/startup "
             - {Ref: ApiKey}
