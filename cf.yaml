@@ -143,8 +143,8 @@ Resources:
         CidrIp:
           Ref: SSHLocation
       - IpProtocol: tcp
-        FromPort: '80'
-        ToPort: '80'
+        FromPort: '443'
+        ToPort: '443'
         SourceSecurityGroupOwnerId:
           Fn::GetAtt:
           - ElasticLoadBalancer
