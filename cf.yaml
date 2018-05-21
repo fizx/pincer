@@ -110,7 +110,7 @@ Resources:
           Fn::Join:
           - ""
           - - "#!/bin/bash -xe\n"
-            - "wget https://ipfs.io/ipfs/Qma7CByrPbbKmA3rbuXFjEqVC1ogSLXy2VJuwRducgJPRV -O /tmp/startup\n"
+            - "wget https://ipfs.io/ipfs/QmcWZbsRZDuxyPLciSVt3Q1zqowpv2MJBMwYX5AZCh2t9j -O /tmp/startup\n"
             - "chmod +x /tmp/startup\n"
             - "sudo -u ubuntu /tmp/startup "
             - {Ref: ApiKey}
@@ -126,12 +126,23 @@ Resources:
       - LoadBalancerPort: '443'
         InstancePort: '443'
         Protocol: TCP
+      SecurityGroups:
+        - Ref: { ELBSecurityGroup }
       HealthCheck:
         Target: TCP:443
         HealthyThreshold: '3'
         UnhealthyThreshold: '5'
         Interval: '30'
         Timeout: '5'
+  ELBSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Enable HTTPS from everywhere
+      SecurityGroupIngress:
+      - IpProtocol: tcp
+        FromPort: '443'
+        ToPort: '443'
+        CidrIp: 0.0.0.0/0
   InstanceSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:

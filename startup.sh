@@ -41,3 +41,4 @@ sudo service haproxy start
 wget https://ipfs.io/ipfs/QmWXJw7U4FeuYPEiuD485un4R2Jo6gjLNJxv9Wz4Pn4PYY -O server.rb
 sudo gem install sinatra --no-rdoc --no-ri
 screen -S ruby -d -m ruby server.rb "$KEY"
+sudo service haproxy restart
