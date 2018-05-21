@@ -127,7 +127,7 @@ Resources:
         InstancePort: '443'
         Protocol: TCP
       SecurityGroups:
-        - Ref: { ELBSecurityGroup }
+      - Ref: ELBSecurityGroup
       HealthCheck:
         Target: TCP:443
         HealthyThreshold: '3'
