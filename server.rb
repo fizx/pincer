@@ -22,7 +22,7 @@ get '/pin/:hash' do
 end
 
 post '/pin/:hash' do
-  `ipfs pin add --progress false #{safe(params["hash"])} 2>&1`
+  `ipfs pin add -r --progress=false #{safe(params["hash"])} 2>&1`
 end
 
 delete '/pin/:hash' do
