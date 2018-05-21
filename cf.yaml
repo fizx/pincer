@@ -125,9 +125,9 @@ Resources:
       Listeners:
       - LoadBalancerPort: '443'
         InstancePort: '443'
-        Protocol: HTTPS
+        Protocol: TCP
       HealthCheck:
-        Target: HTTPS:443/
+        Target: TCP:443
         HealthyThreshold: '3'
         UnhealthyThreshold: '5'
         Interval: '30'
